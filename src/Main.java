@@ -108,22 +108,21 @@ public class Main {
 
 //        double result = Math.pow(2,3);
 //        System.out.println(result);
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
 
-        Scanner principal = new Scanner(System.in); // the amount of the loan
+        Scanner scanner = new Scanner(System.in); // the amount of the loan
         System.out.print("Principal : ");
-        double principalValue = principal.nextInt();
+        double principalValue = scanner.nextInt();
 
-
-        Scanner rate = new Scanner(System.in);
         System.out.print("Annual Interest Rate : ");
-        double monthlyInterestRate = (rate.nextDouble() / 100)/12;
+        double monthlyInterestRate = (scanner.nextDouble() / PERCENT) / MONTHS_IN_YEAR;
 
         System.out.print("Period (Years) : ");
-        Scanner period = new Scanner(System.in);
-        int periodValue = period.nextInt();
+        int periodValue = scanner.nextInt();
 
-        double monthlyMortgageNominator = principalValue * (monthlyInterestRate * Math.pow((1+monthlyInterestRate),(periodValue *12) ));
-        double monthlyMortgageDenominator =  Math.pow((1.0+monthlyInterestRate),(periodValue * 12) ) - 1;
+        double monthlyMortgageNominator = principalValue * (monthlyInterestRate * Math.pow((1+monthlyInterestRate),(periodValue *MONTHS_IN_YEAR) ));
+        double monthlyMortgageDenominator =  Math.pow((1.0+monthlyInterestRate),(periodValue * MONTHS_IN_YEAR) ) - 1;
 
         double monthlyMortgage = monthlyMortgageNominator / monthlyMortgageDenominator;
 
