@@ -108,26 +108,75 @@ public class Main {
 
 //        double result = Math.pow(2,3);
 //        System.out.println(result);
-        final byte MONTHS_IN_YEAR = 12;
-        final byte PERCENT = 100;
+//        final byte MONTHS_IN_YEAR = 12;
+//        final byte PERCENT = 100;
+//
+//        Scanner scanner = new Scanner(System.in); // the amount of the loan
+//        System.out.print("Principal : ");
+//        double principalValue = scanner.nextInt();
+//
+//        System.out.print("Annual Interest Rate : ");
+//        double monthlyInterestRate = (scanner.nextDouble() / PERCENT) / MONTHS_IN_YEAR;
+//
+//        System.out.print("Period (Years) : ");
+//        int periodValue = scanner.nextInt();
+//
+//        double monthlyMortgageNominator = principalValue * (monthlyInterestRate * Math.pow((1+monthlyInterestRate),(periodValue *MONTHS_IN_YEAR) ));
+//        double monthlyMortgageDenominator =  Math.pow((1.0+monthlyInterestRate),(periodValue * MONTHS_IN_YEAR) ) - 1;
+//
+//        double monthlyMortgage = monthlyMortgageNominator / monthlyMortgageDenominator;
+//
+//        System.out.print("Mortgage: " + NumberFormat.getCurrencyInstance().format(monthlyMortgage));
 
-        Scanner scanner = new Scanner(System.in); // the amount of the loan
-        System.out.print("Principal : ");
-        double principalValue = scanner.nextInt();
 
-        System.out.print("Annual Interest Rate : ");
-        double monthlyInterestRate = (scanner.nextDouble() / PERCENT) / MONTHS_IN_YEAR;
+        // Control flow
+        // if statements in java
+//        int temprature = 32;
+//        if(temprature > 30){
+//            System.out.println("It's a hot day");
+//            System.out.println("Drink water");
+//        }else if(temprature > 20 && temprature <=30){
+//            System.out.println("Beautiful day");
+//        }else {
+//            System.out.println("Cold day");
+//        }
 
-        System.out.print("Period (Years) : ");
-        int periodValue = scanner.nextInt();
+        // simplified boolean value
+//        int income = 120_000;
+//        boolean hasHighIncome = (income > 100_000);
 
-        double monthlyMortgageNominator = principalValue * (monthlyInterestRate * Math.pow((1+monthlyInterestRate),(periodValue *MONTHS_IN_YEAR) ));
-        double monthlyMortgageDenominator =  Math.pow((1.0+monthlyInterestRate),(periodValue * MONTHS_IN_YEAR) ) - 1;
+        // ternary operator
+        int income = 100_000;
+        String className = income>100_00 ? "First Class" : "Economy";
 
-        double monthlyMortgage = monthlyMortgageNominator / monthlyMortgageDenominator;
+        // switch case / flow
+//        String role = "Admin";
+//        switch (role){
+//            case "Admin":
+//                System.out.println("You're an Admin");
+//                break;
+//            case "Moderator":
+//                System.out.println("You're a Moderator");
+//                break;
+//            default:
+//                System.out.println("You're a Guest");
+//        }
 
-        System.out.print("Mortgage: " + NumberFormat.getCurrencyInstance().format(monthlyMortgage));
+        // Fizz Buzz
+        // 5 -- fizz, 3 -- buzz, 3&5 --- fizzbuzz
+        System.out.print("Enter Number : ");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
 
+        if(num % 5 == 0 && num % 3 == 0){
+            System.out.println("FizzBuzz");
+        }else if(num % 5 == 0){
+            System.out.println("Fizz");
+        }else if(num % 3 == 0){
+            System.out.println("Buzz");
+        }else{
+            System.out.println(num);
+        }
 
 
 
