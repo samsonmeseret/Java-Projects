@@ -1,6 +1,7 @@
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -164,32 +165,41 @@ public class Main {
 
         // Fizz Buzz
         // 5 -- fizz, 3 -- buzz, 3&5 --- fizzbuzz
-        System.out.print("Enter Number : ");
-        Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
-
-        if(num % 5 == 0 && num % 3 == 0){
-            System.out.println("FizzBuzz");
-        }else if(num % 5 == 0){
-            System.out.println("Fizz");
-        }else if(num % 3 == 0){
-            System.out.println("Buzz");
-        }else{
-            System.out.println(num);
-        }
-
-
-
-
-
-
-
-
+//        System.out.print("Enter Number : ");
+//        Scanner scanner = new Scanner(System.in);
+//        int num = scanner.nextInt();
 //
+//        if(num % 5 == 0 && num % 3 == 0){
+//            System.out.println("FizzBuzz");
+//        }else if(num % 5 == 0){
+//            System.out.println("Fizz");
+//        }else if(num % 3 == 0){
+//            System.out.println("Buzz");
+//        }else{
+//            System.out.println(num);
+//        }
+
+
+
+
+
+
+
+//     Loops
+//        For Loop
 //        for (int i = 1; i <= 5; i++) {
 //            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
 //            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
 //            System.out.println("i = " + i);
 //        }
+        // While Loop
+        // terminate with quite (project)
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+        while (!input.equals("quit")){  // since string is reference type, "quite" != "quite"
+            System.out.println("Command >>");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
     }
 }
